@@ -7,6 +7,8 @@ const MenuItems = ({ items, depthLevel }) => {
 
   let ref = useRef();
 
+  console.log('ref', ref);
+
   return (
     <li
       className="menu-items"

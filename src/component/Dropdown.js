@@ -1,9 +1,6 @@
 import MenuItems from './MenuItems'
 
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {
-
-  console.log('sfsdfsdf')
-
   depthLevel = depthLevel + 1;
   const dropdownClass = depthLevel > 1 ? "dropdown-submenu" : "";
   return (
@@ -16,4 +13,4 @@ const Dropdown = ({ submenus, dropdown, depthLevel }) => {
   );
 };
 
-export default Dropdown
+export default Dropdown;

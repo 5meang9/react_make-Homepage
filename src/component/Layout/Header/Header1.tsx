@@ -1,18 +1,23 @@
 import Navbar from '../../Navbar'
-import "../../../styles.css"
+import './Header.scss'
+import logoImage from '../../../../src/logo192.png'
+// import "../../../styles.css"
 
 const Header = () => {
 
   return (
-    <header>
+    <header className='header'>
       <div className="nav-area">
         <a href="/#" className="logo">
-          CodeSolution{" "}
+          <img src={logoImage} alt="x" />
         </a>{" "}
         <Navbar />
+        <div className='header-title'>
+          5meang9 Dev
+        </div>
       </div>{" "}
     </header>
   )
 }
-
+ 
 export default Header 
