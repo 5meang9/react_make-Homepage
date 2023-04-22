@@ -1,7 +1,7 @@
 import styles from './Header.module.scss'
 import React, {useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHippo } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { useEventListener } from '../../../hooks'
 import SubHeader from '../SubHeader/SubHeader'
 import ReactDOM from 'react-dom';
@@ -25,7 +25,8 @@ const Header = () => {
       <div className={styles.contents}>
         <div className={styles.headerMainWrapper}>
           <div className={styles.logo}>
-            <FontAwesomeIcon icon={faHippo} shake className={styles.hippo} style={{color: '#8d00fa'}}/>
+            <FontAwesomeIcon className={styles.hippo} icon={faSun} spin style={{color: "#ff5900",}} />
+            {/* <FontAwesomeIcon className={styles.hippo} icon={faHippo} shake style={{color: "#001061",}} /> */}
             {/* <img src={logoImage} alt="x" /> */}
           </div>
           <nav className={styles.navigation} onMouseOver={()=>openAndCloseSubMenu(true)} onMouseOut={()=>openAndCloseSubMenu(false)}>
