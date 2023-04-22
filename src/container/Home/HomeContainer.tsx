@@ -1,6 +1,8 @@
+import Home from "../../pages/Home"
+
 const HomeContainer = () => {
   return (
-    <div>hi~~~~~~~~~~~~~~~</div>
+    <Home />
   )
 }
 export default HomeContainer
