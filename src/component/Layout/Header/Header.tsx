@@ -52,7 +52,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        {<SubHeader refName={hoverValue} dropdown={isMenuDropDownOpen}/>}
+        {<SubHeader refName={hoverValue} dropdown={isMenuDropDownOpen} />}
       </div>
     </header>
   )

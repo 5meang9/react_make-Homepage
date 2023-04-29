@@ -5,6 +5,8 @@ import '@fontsource/aguafina-script';
 // import React, { useRef } from "react";
 // import ReactPlayer from 'react-player'
 
+import Board from '../component/Board/Board';
+
 
 
 export default function Home(){
@@ -21,12 +23,13 @@ export default function Home(){
         </div>
       </div>
       <div className='profile-wrap'>
-        <div className='profile-title'>Profile</div>
+        <div className='profile-title'>Profile~</div>
         <div className='profile-main-layout'>
           <div className='profile-badge'>
             Java
           </div>
         </div>
+        <Board/>
       </div>
     </div>
   )
