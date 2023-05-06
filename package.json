@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "server/src/index.ts",
+  
   "scripts": {
     "start": "node server/index.ts",
-    "backend": "nodemon server/src/index.ts",
+    "backend": "ts-node --esm server/src/index.ts",
     "frontend": "npm run start --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
@@ -23,6 +23,14 @@
   },
   "homepage": "https://github.com/5meang9/react_make-Homepage#readme",
   "dependencies": {
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.4.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
   }
 }

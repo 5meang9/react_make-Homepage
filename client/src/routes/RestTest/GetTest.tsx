@@ -3,12 +3,14 @@ import {get} from '../../server'
 
 export default function GetTest(){
   const [data, setData] = useState<object>({})
+  const [size, setSize] = useState(0)
+
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const getAllTest = useCallback(() =>{
     get('/test')
       .then(res => res.json())
-      .then(data => setData(data))
+      .then(data => setData(data['body']))
       .catch(error => setErrorMessage(error.message))
   }, [])
 
@@ -17,14 +19,25 @@ export default function GetTest(){
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => setErrorMessage(error.message))
-    },[])
-  
+  },[])
+
+
   // useEffect(() => {
   //   fetch('http://localhost:4000/test')
   //   .then(res => res.json())
   //   .then(data => setData(data))
   //   .catch(error => setErrorMessage(error.message))
   // }, [])
+
+  // useEffect(() =>{
+  //   get('/test')
+  //     .then(res => res.json())
+  //     .then(data => setData(data['body']))
+  //     .catch(error => setErrorMessage(error.message))
+  // }, [])
+
+  
+
 
   return (
     <div className="mb-4">
