@@ -6,6 +6,7 @@ import '@fontsource/aguafina-script';
 // import ReactPlayer from 'react-player'
 
 import Board from '../component/Board/Board';
+import GetTest from '../routes/RestTest/GetTest';
 
 
 
@@ -30,6 +31,7 @@ export default function Home(){
           </div>
         </div>
         <Board/>
+        <GetTest/>
       </div>
     </div>
   )

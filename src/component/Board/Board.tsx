@@ -1,13 +1,13 @@
 import { createServer } from "http";
 import { Db } from "mongodb";
 import { useState, useCallback } from "react";
-import { connectAndUseDB, MongoDB } from "../../mongodb";
+// import { connectAndUseDB, MongoDB } from "../../mongodb";
 import {get} from '../../server'
-import * as M from '../../mongodb';
+// import * as M from '../../mongodb';
 
 
 // const connectCallback = (db: MongoDB) => {
-//   const hostname = 'localhost', port = 4000
+//   const hostname = 'localhost', port = 3000
 
 //   createServer(createExpressApp(db)).listen(port, () =>
 //   console.log(`connect http://${hostname}:${port}`)
@@ -17,7 +17,28 @@ import * as M from '../../mongodb';
 //   console.log('db', db)
 // }
 
-// connectAndUseDB(connectCB, 'homedb')
+// connectAndUseDB(connectCallback, 'homedb')
+
+
+// const connectCB = async (db: M.MongoDB) => {
+//   try{
+//     const boards = db.collection('boards')
+//     // const one = await boards.findOne({})
+//     // console.log('one', one)
+
+//     const many = await boards.find({}).toArray()
+//     console.log('many', many)
+//     console.log(many[0].badge_title)
+//   } catch (e){
+//     if (e instanceof Error) console.log(e.message)
+//   }
+// }
+
+// const findTest = () => {
+//   M.connectAndUseDB(connectCB, 'homedb')
+// }
+
+// findTest()
 
 
 export default function Board(){
@@ -51,4 +72,24 @@ export default function Board(){
 function createExpressApp(db: Db): import("http").RequestListener<typeof import("http").IncomingMessage, typeof import("http").ServerResponse> | undefined {
   throw new Error("Function not implemented.");
 }
-
+// export default function Board(){
+//   const connectCB = async (db: M.MongoDB) => {
+//     try{
+//       const boards = db.collection('boards')
+//       // const one = await boards.findOne({})
+//       // console.log('one', one)
+  
+//       const many = await boards.find({}).toArray()
+//       // console.log('many', many)
+//       // console.log(many[0].badge_title)
+//     } catch (e){
+//       if (e instanceof Error) console.log(e.message)
+//     }
+//   }
+  
+//   const findTest = () => {
+//     M.connectAndUseDB(connectCB, 'homedb')
+//   }
+  
+//   findTest()
+// }

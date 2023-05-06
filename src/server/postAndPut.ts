@@ -1,6 +1,6 @@
 import { getServerUrl } from "./getServerUrl";
 
-const postAndPut = (methodName: string) => (path: string, data: object) =>{
+const postAndPut = (methodName: string) => (path: string, data: object) => {
   return fetch(getServerUrl(path), {
     method: methodName,
     headers: {'Content-Type': 'application/json'},
