@@ -4,7 +4,6 @@
   "private": true,
   "description": "",
   "main": "server/src/index.ts",
-  
   "scripts": {
     "start": "node server/index.ts",
     "backend": "ts-node --esm server/src/index.ts",
@@ -23,6 +22,7 @@
   },
   "homepage": "https://github.com/5meang9/react_make-Homepage#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "concurrently": "^8.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",

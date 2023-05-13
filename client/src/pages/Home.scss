@@ -37,38 +37,7 @@
   }
 }
 
-.profile-wrap{
-  text-align: center;
-  .profile-title{
-    font-size: 50px;
-  }
-  .profile-main-layout{
-    border: 1px solid #e6e6e6;
-    margin: 0 50px;
-    border-radius: 50px;
-    padding: 100px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  .profile-main-layout:hover{
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    background-color: rgba(0,0,0,0.02);
-    transition: box-shadow 0.3s ease-in-out;
-    // cursor: url('/public/images/hand-pointer-solid.svg') 4 12, auto;
-  }
-  .profile-badge{
-    width: 50px;
-    height: 20px;
-    border-radius: 50px;
-    background-color: skyblue;
-    line-height: 16px;
-    font-size: 15px;
-  }
-  .profile-sub-layout{
-    border: 1px solid red;
-    margin: 100px;
-  }
-}
+
 
 // body {
 //   background: #EEEEEE;

@@ -25,13 +25,7 @@ export default function Home(){
       </div>
       <div className='profile-wrap'>
         <div className='profile-title'>Profile~</div>
-        <div className='profile-main-layout'>
-          <div className='profile-badge'>
-            Java
-          </div>
-        </div>
         <Board/>
-        <GetTest/>
       </div>
     </div>
   )
