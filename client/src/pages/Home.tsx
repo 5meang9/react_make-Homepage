@@ -1,13 +1,9 @@
 import './Home.scss'
 import TypingFont from '../component/TypingFont/TypingFont';
 import '@fontsource/aguafina-script';
-// import useVideoPlayer from '../hooks/useVideoPlayer'
-// import React, { useRef } from "react";
-// import ReactPlayer from 'react-player'
-
 import Board from '../component/Board/Board';
-import GetTest from '../routes/RestTest/GetTest';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Bespoke from './Bespoke';
 
 
 export default function Home(){

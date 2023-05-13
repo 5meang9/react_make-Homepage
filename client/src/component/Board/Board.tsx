@@ -9,8 +9,6 @@ export default function Board(){
   const [data, setData] = useState<string[]>([])
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-
-
   useEffect(() =>{
     get('/test')
       .then(res => res.json())
@@ -20,9 +18,9 @@ export default function Board(){
 
 
   return (
-    <div>
+    <>
       {data.map((row: any) => (
-        <>
+        <a href="/bespoke">
           <div className='profile-main-layout'>
             <div className="profile-main-contents-wrap">
               <Badge pill bg="primary">
@@ -40,8 +38,8 @@ export default function Board(){
               </div>
             </div>
           </div>
-        </>
+        </a>
       ))}
-    </div>
+    </>
   )
 }
