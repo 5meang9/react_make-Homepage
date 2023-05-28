@@ -1,9 +1,9 @@
-import StrB1 from "./StrB1";
+import StoryBanner from "./StoryBanner";
 
 
 export default function Bespoke(){
 
   return(
-    <StrB1/>
+    <StoryBanner/>
   )
 }

@@ -1,6 +1,6 @@
-import './StrB1.scss';
+import './StoryBanner.scss';
 
-const StrB1 = () => {
+const StoryBanner = () => {
   
   // let categoryNavWrap = document.querySelector(".categoryNavWrap");
   // const buttons = document.querySelectorAll(".categoryBtn");
@@ -85,4 +85,4 @@ const StrB1 = () => {
   )
 }
 
-export default StrB1
+export default StoryBanner
