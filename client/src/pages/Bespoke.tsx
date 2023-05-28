@@ -1,5 +1,9 @@
+import StrB1 from "./StrB1";
+
+
 export default function Bespoke(){
+
   return(
-    <div>hi~~~~~~~~~</div>
+    <StrB1/>
   )
 }

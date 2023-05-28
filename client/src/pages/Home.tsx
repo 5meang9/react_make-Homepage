@@ -3,7 +3,6 @@ import TypingFont from '../component/TypingFont/TypingFont';
 import '@fontsource/aguafina-script';
 import Board from '../component/Board/Board';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Bespoke from './Bespoke';
 
 
 export default function Home(){
