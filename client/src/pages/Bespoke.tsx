@@ -1,6 +1,6 @@
 import StoryBanner from "./StoryBanner";
 import NewBespokeCombine from "./NewBespoke/NewBespokeCombine";
-import './NewBespoke/NewBespoke'
+// import './NewBespoke/NewBespoke'
  
 export default function Bespoke(){
 

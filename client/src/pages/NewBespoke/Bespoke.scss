@@ -364,6 +364,7 @@ input:checked + .slider:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 .bespoke-position-select-front-img,
 .bespoke-position-select-strap-img {
@@ -615,21 +616,23 @@ align-items: center;
 }
 
 .bespoke-symbol-btn:active {
-border: 2.5px solid #2196f3 !important;
-text-align: center;
+  border: 2.5px solid #2196f3 !important;
+  text-align: center;
 }
 .bespoke-front-big-text-symbol-btn.active,
 .bespoke-front-big-pet-symbol-btn.active {
-border: 2.5px solid #2196f3;
+  border: 2.5px solid #2196f3;
 }
 /* !bespoke font color css*/
 .bespoke-color-select-wrap {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-flex-wrap: wrap;
-margin-left: 4px;
-width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4px;
+  width:100%;
+  list-style:  none;
+  padding: 0;
 }
 
 .bespoke-color-radio-wrap {

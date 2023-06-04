@@ -20,7 +20,7 @@ export default function Board(){
   return (
     <>
       {data.map((row: any) => (
-        <a href="/bespoke">
+        <a href="/bespoke?0JSM1TT40306F">
           <div className='profile-main-layout'>
             <div className="profile-main-contents-wrap">
               <Badge pill bg="primary">

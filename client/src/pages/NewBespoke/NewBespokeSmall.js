@@ -1,6 +1,6 @@
 let preview = `
 <div id="small-preview" class="active">
-  <div class="preview-wrap active">
+  <div class="preview-wrap" style="display: block;">
     <div class="preview-front-img">
       <img src="" alt="미리보기 전면" />
     </div>
