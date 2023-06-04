@@ -2527,15 +2527,15 @@ import { useEffect } from 'react';
       }
     }
   
-    // simulMove(_this){ //시뮬 배경 이미지 스크롤 시, 움직이는 부분
-    //   // console.log("움직여~~");
-    //   let position = document.documentElement.scrollTop;
+    simulMove(_this){ //시뮬 배경 이미지 스크롤 시, 움직이는 부분
+      // console.log("움직여~~");
+      let position = document.documentElement.scrollTop;
   
-    //   if(_this.previewWrap.style.display == 'block'){
-    //     let _target = window.pageYOffset + document.querySelector("#maxTop").getBoundingClientRect().top - 450;
-    //     _this.previewWrap.style.top = position < _target ? position+'px' : _target+'px';
-    //   }
-    // }
+      if(_this.previewWrap.style.display == 'block'){
+        let _target = window.pageYOffset + document.querySelector("#maxTop").getBoundingClientRect().top - 30;
+        _this.previewWrap.style.top = position < _target ? position+'px' : _target+'px';
+      }
+    }
   
     reset(){ //페이지 재로딩 > 옵션 내용, 금액 초기화
       if(!Event.persisted){
@@ -2655,6 +2655,9 @@ import { useEffect } from 'react';
           switch(bespoke.size){
             case "S": case "SM": case "M": case "MT":
               _this.exceptSymbol(_this);
+              if(!_this.input.name){
+                _this.input.name = _this.input.maxLength
+              }
               // !_this.input.name ? _this.input.name = _this.input.maxLength : ''; //mediumn 세팅전 size 저장
               _this.setInputValToMax(1, _this);
               _this.input_appear(_this.input.value, _this);
@@ -2675,6 +2678,9 @@ import { useEffect } from 'react';
           break;
         default: //그 외 폰트
           //미디움 선택전 originsize 재세팅
+          if(_this.input.name != ''){
+            _this.setInputValToMax(_this.input.name, _this)
+          }
           // _this.input.name != '' ? _this.setInputValToMax(_this.input.name, _this) : '';
   
           if(_this.positionFront.classList.contains('active')){
@@ -3016,7 +3022,7 @@ import { useEffect } from 'react';
   
     setMethods(_this){ //이벤트 등록
       // _this넘겨줘야하는 것들 넘겨주기!! 내일 할일
-      // window.addEventListener('scroll',function(e){_this.simulMove(_this)});
+      window.addEventListener('scroll',function(e){_this.simulMove(_this)});
       window.addEventListener('pageshow', _this.reset);
       document.getElementsByClassName('bespoke-text-input')[0].oninput = function(e){ _this.input_handler(e, _this)};
       document.getElementsByClassName('bespoke-text-clear-btn')[0].addEventListener('click', function(e){_this.inputClear(_this)});

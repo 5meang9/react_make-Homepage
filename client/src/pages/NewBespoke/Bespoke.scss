@@ -1,7 +1,11 @@
+.setting{
+  width: 20%;
+}
 .wrap{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
+  margin: auto;
 }
 /* 비스포크 선택완료 이미지 노출 */
 .bespoke-img-result.active{
@@ -545,13 +549,14 @@ text-transform: uppercase;
 }
 
 .bespoke-text-clear-btn {
-position: relative;
-margin-left: 20px;
-top: 2px;
-width: 20px;
-height: 20px;
-text-align: center;
-background-color: transparent;
+  position: relative;
+  margin-left: 26px;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
 }
 
 .bespoke-text-input-limit-wrap {
@@ -852,9 +857,10 @@ top: 3px;
 /* !input 값 보여지는 부분 */
 /* !small */
 .preview-container {
-position: absolute;
-top: 0px;
-left: 0px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: block;
 }
 
 #small-preview,

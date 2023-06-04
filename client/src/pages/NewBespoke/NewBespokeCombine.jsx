@@ -45,7 +45,7 @@ const NewBespokeCombine = () => {
             </div>
             <div className="bespoke-container active"></div>
           </div>
-          <div className="bespoke-img-result"></div>
+          <div className="bespoke-img-result" id="maxTop"></div>
 
         </div>
       </>

@@ -6,8 +6,10 @@ export default function Bespoke(){
 
   return(
     <>
+    <div>
       <StoryBanner />
       <NewBespokeCombine />
+    </div>
     </>
   )
 }
