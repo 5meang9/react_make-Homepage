@@ -44,8 +44,10 @@ const NewBespokeCombine = () => {
                 alt="" />
             </div>
             <div className="bespoke-container active"></div>
+            <div id='add_option_0'></div>
+            <div className="bespoke-img-result" id="maxTop">
+            </div>
           </div>
-          <div className="bespoke-img-result" id="maxTop"></div>
 
         </div>
       </>

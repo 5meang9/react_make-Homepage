@@ -2539,7 +2539,7 @@ import { useEffect } from 'react';
   
     reset(){ //페이지 재로딩 > 옵션 내용, 금액 초기화
       if(!Event.persisted){
-        // document.getElementById('add_option_0').value = '';
+        document.getElementById('add_option_0').innerText = '';
         // document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click();
       }
     }
@@ -2786,10 +2786,10 @@ import { useEffect } from 'react';
   
     //선택취소 버튼
     bespokeCancle(_this){
-      document.getElementById('option_box1_del').click();
-      document.getElementById('add_option_0').value = '';
-      document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
-      document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click();
+      // document.getElementById('option_box1_del').click();
+      document.getElementById('add_option_0').innerText = '';
+      // document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
+      // document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click();
       document.getElementsByClassName('bespoke-img-result')[0].classList.remove('active');
     }
   
@@ -2806,53 +2806,53 @@ import { useEffect } from 'react';
       let selectSymbolColor = _this.convertActiveValue(_this.symbolColors, 'value');
       let selectPetColor = _this.convertActiveValue(_this.petColors, 'value');
       let selectPosition = _this.getChildrenEl(_this.bespokePosition, 0, 'innerHTML') == '정면' ? 'front' : 'strap';
-  
+
       if(document.getElementById('bespoke-checked-whether-option1').checked){
         switch(_this.convertActiveValue(_this.bespokeKinds, 'class')){
           case 'bespoke-font-select-medium-afont active': //미듐
             if(str.length > 0 && str != 'ˇ'){
               if(str.replace(redex, '').length == 1){ //띄어쓰기 제외 금액 선택 15000
-                document.getElementById('product_option_id1').getElementsByTagName('option')[5].selected = true;
+                // document.getElementById('product_option_id1').getElementsByTagName('option')[5].selected = true;
               }
-              document.getElementById('add_option_0').value = 'front'+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor;
+              document.getElementById('add_option_0').innerText = 'front'+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor;
             }else{ //input 값 없이 옵션적용 클릭 경우
-              document.getElementById('add_option_0').value = '';
-              document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
             }
             break;
           case 'bespoke-font-select-big-textfont active': //빅텍스트 25000
-              document.getElementById('product_option_id1').getElementsByTagName('option')[7].selected = true;
-              document.getElementById('add_option_0').value = '';
-              document.getElementById('add_option_0').value = 'front|'+'bigText-'+selectBigTextSymbol+'|빅심볼색상-'+selectInputColor;
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[7].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              document.getElementById('add_option_0').innerText = 'front|'+'bigText-'+selectBigTextSymbol+'|빅심볼색상-'+selectInputColor;
               break;
           case "bespoke-font-select-big-petfont active": //빅펫 25000
-              document.getElementById('product_option_id1').getElementsByTagName('option')[7].selected = true;
-              document.getElementById('add_option_0').value = '';
-              document.getElementById('add_option_0').value = "front|"+"bigPet-"+selectBigPetsSymbol+"|빅심볼색상-"+selectPetColor;
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[7].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              document.getElementById('add_option_0').innerText = "front|"+"bigPet-"+selectBigPetsSymbol+"|빅심볼색상-"+selectPetColor;
               break;
           default: // 그 외
             // 텍스트 & 심볼}
             if(_this.previewFront.getElementsByTagName('img').length > 0 && _this.previewFront.getElementsByTagName('div').length > 0){
-              document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
-              // document.getElementById('add_option_0').value = '';
-              document.getElementById('add_option_0').value = selectPosition+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor +
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              document.getElementById('add_option_0').innerText = selectPosition+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor +
               (/[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭ⓁⓂⓄⓅⓆ]/.test(str) ? '|심볼색상-'+selectSymbolColor : '');
             }else if(_this.previewFront.getElementsByTagName('div').length > 0){ // 텍스트
-              document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
-              // document.getElementById('add_option_0').value = '';
-              document.getElementById('add_option_0').value = selectPosition+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor;
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              document.getElementById('add_option_0').innerText = selectPosition+'|자수글자-'+str+'|'+fontName+'-'+fontVal+'|자수색상-'+selectInputColor;
             }else if(_this.previewFront.getElementsByTagName('img').length > 0){ // 심볼
-              document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
-              // document.getElementById('add_option_0').value = '';
-              document.getElementById('add_option_0').value = selectPosition+'|자수글자-'+str +
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[totalPriceSelection].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              document.getElementById('add_option_0').innerText = selectPosition+'|자수글자-'+str +
               (/[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭ⓁⓂⓄⓅⓆ]/.test(str) ? '|심볼색상-'+selectSymbolColor : '');
             }else{ //input 값 없이 옵션적용 클릭 경우
-              document.getElementById('add_option_0').value = '';
-              document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
+              document.getElementById('add_option_0').innerText = '';
+              // document.getElementById('product_option_id1').getElementsByTagName('option')[0].selected = true;
             }
             break;
         }
-        document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click(); //옵션 클릭
+        // document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click(); //옵션 클릭
         //모든 필수확인사항 언체크
         _this.requireCheck[0].checked = false;
         _this.requireCheck[1].checked = false;
@@ -2864,11 +2864,13 @@ import { useEffect } from 'react';
         setTimeout(() => { // 옵션선택 내용 하단에 이미지로 노출
           if (_this.bespokeSelectResult == null) {
             setTimeout(() => {
-              _this.bespokeSelectResult = document.querySelector('#totalProducts > table > tbody.option_products > tr > td:nth-child(1) > p > span').innerText;
+              // _this.bespokeSelectResult = document.querySelector('#totalProducts > table > tbody.option_products > tr > td:nth-child(1) > p > span').innerText;
+              _this.bespokeSelectResult = document.getElementById('add_option_0').innerText
               _this.bespokeSelectContentComb(_this);
             }, 500);
           } else {
-            _this.bespokeSelectResult = document.querySelector('#totalProducts > table > tbody.option_products > tr > td:nth-child(1) > p > span').innerText;
+            _this.bespokeSelectResult = document.getElementById('add_option_0').innerText
+            // _this.bespokeSelectResult = document.querySelector('#totalProducts > table > tbody.option_products > tr > td:nth-child(1) > p > span').innerText;
             _this.bespokeSelectContentComb(_this);
           }
         }, 500);

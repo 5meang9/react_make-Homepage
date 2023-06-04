@@ -842,7 +842,7 @@ let htmlTxt = `
 				alt=""
 			/>
 		</div>
-		<div class="bespoke-checked-whether-content-wrap">
+		<div class="bespoke-checked-whether-content-wrap active">
 			<div class="bespoke-checked-whether-content">
 				<input
 					type="checkbox"
