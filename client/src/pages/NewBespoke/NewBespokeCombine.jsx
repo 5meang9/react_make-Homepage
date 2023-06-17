@@ -6,26 +6,30 @@ const NewBespokeCombine = () => {
 
   let buttons;
   let getOwnProductCode = '';
+  
   useEffect(() => {
     buttons = document.querySelectorAll(".categoryBtn");
     buttons.forEach(e => {
       if(e.classList.contains('active')){
         getOwnProductCode = e.ariaLabel;
-        console.log(getOwnProductCode);
+        // console.log(getOwnProductCode);
       } 
     })
     // bespoke.getPrdCode();
     bespoke.bespokeAppearCheck(getOwnProductCode);
     var jnsBespoke;
-    if(bespoke.bespokeAppearCheck(getOwnProductCode)){
+    // if(bespoke.bespokeAppearCheck(getOwnProductCode)){
       jnsBespoke = new bespoke.JnsBespoke(getOwnProductCode, document.querySelector('.bespoke-container'), document.querySelector('.preview-container'));
 
-      document.addEventListener("DOMContentLoaded", function(){
-        jnsBespoke.bespokeToggle.addEventListener('click', function(e){
-          jnsBespoke.bespokeToggleClick(e, jnsBespoke)
-        });
-      })
-    }
+      // console.log('jnsBespoke.bespokeToggle',jnsBespoke.bespokeToggleClick);
+      // document.addEventListener("DOMContentLoaded", function(){
+      jnsBespoke.bespokeToggle.addEventListener('click', function(e){
+        // e.stopImmediatePropagation()
+        jnsBespoke.bespokeToggleClick(jnsBespoke)
+      });
+      jnsBespoke.bespokeToggleClick(jnsBespoke)
+      // })
+    // }
   },[getOwnProductCode])
 
   return(

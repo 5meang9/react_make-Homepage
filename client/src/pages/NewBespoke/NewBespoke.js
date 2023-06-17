@@ -2214,7 +2214,7 @@ import { useEffect } from 'react';
       this.bespokeToggle = document.getElementsByClassName('bespoke-container-toggle')[0];
       this.toggleArrowImg = document.querySelector('.bespoke-container-toggle > img');
       this.previewWrap = document.getElementsByClassName('preview-wrap')[0];
-      this.previewBackGround = document.getElementsByClassName('preview-background')[0];
+      // this.previewBackGround = document.getElementsByClassName('preview-background')[0];
       this.requireConfirm = document.getElementsByClassName('bespoke-checked-whether-content-wrap')[0];
       this.requireCheck = document.querySelectorAll('.bespoke-checked-whether-content > input')
       this.bespokePosition = document.querySelectorAll('.bespoke-position-select-wrap > li');
@@ -2245,6 +2245,8 @@ import { useEffect } from 'react';
         case "S": case "PS": case "SM": case "SD":
           this.bespokeContainer.insertAdjacentHTML("afterbegin", small.htmlTxt);
           this.previewContainer.insertAdjacentHTML("afterbegin", small.preview);
+          // document.getElementsByClassName('bespoke-container-toggle')[0].click();
+          // document.getElementsByClassName('bespoke-container-toggle')[0].click();
           break;
         case "M": case "H": case "MC": case "MT": case "SH": case "XM": case "MF": case "DW":  case "PW": case "SC": case "MW": case "SDD":
           this.bespokeContainer.insertAdjacentHTML("afterbegin", medium.htmlTxt);
@@ -2351,9 +2353,11 @@ import { useEffect } from 'react';
       }
     }
   
-    bespokeToggleClick(e, _this){  // 비스포크 토글 클릭 시 해야 할 동작들
-      console.log('this.bespokeContainer', this.bespokeContainer);
-      console.log('e', e);
+    bespokeToggleClick(_this){  // 비스포크 토글 클릭 시 해야 할 동작들
+      // console.log('this.bespokeContainer', this.bespokeContainer);
+      // console.log('_this', _this);
+
+      // console.log('e', e);
       // e.preventDefault();
       // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%",_this);
       // this.setObjCollections();
@@ -2363,13 +2367,14 @@ import { useEffect } from 'react';
         _this.previewContainer.classList.remove('active');
         _this.toggleArrowImg.src = '/bespoke_assets/icons/arrow-down-new.svg';
         _this.previewWrap.style.display = 'none';
-        _this.previewBackGround.classList.remove('active');
+        // _this.previewBackGround.classList.remove('active');
       } else { //비스포크 판 및 시뮬 노출
         _this.bespokeContainer.classList.add('active');
         _this.previewContainer.classList.add('active');
         _this.toggleArrowImg.src = '/bespoke_assets/icons/arrow-up-new.svg';
         _this.previewWrap.style.display = 'block';
-        _this.previewBackGround.classList.add('active');
+        // _this.previewBackGround.classList.add('active');
+        // console.log('bespoke.size',bespoke.size);
     
         switch (bespoke.size) { //사이즈 별 비스포크 판 및 시뮬 노출
           case "S": case "PS": case "SD": case "SM":
@@ -2377,6 +2382,7 @@ import { useEffect } from 'react';
             _this.smallContainer.classList.add('active');
             _this.requireConfirm.classList.add('active');
             _this.smallDetailSet(_this);
+            // console.log('들어오는지',_this.smallContainer.classList.add('active'))
             break;
           case "M": case "H": case "MC": case "MT": case "SC": case "SH": case "XM": case "MF": case "DW": case "PW": case "MW": case "SDD":
             _this.mediumPreview.classList.add('active');
@@ -2536,10 +2542,11 @@ import { useEffect } from 'react';
         _this.previewWrap.style.top = position < _target ? position+'px' : _target+'px';
       }
     }
-  
+   
     reset(){ //페이지 재로딩 > 옵션 내용, 금액 초기화
       if(!Event.persisted){
         document.getElementById('add_option_0').innerText = '';
+        document.getElementsByClassName('bespoke-img-result')[0].classList.remove('active');
         // document.getElementsByClassName('selectButton')[0].getElementsByTagName('a')[0].click();
       }
     }
@@ -3025,7 +3032,7 @@ import { useEffect } from 'react';
     setMethods(_this){ //이벤트 등록
       // _this넘겨줘야하는 것들 넘겨주기!! 내일 할일
       window.addEventListener('scroll',function(e){_this.simulMove(_this)});
-      window.addEventListener('pageshow', _this.reset);
+      window.addEventListener('pageshow', _this.reset());
       document.getElementsByClassName('bespoke-text-input')[0].oninput = function(e){ _this.input_handler(e, _this)};
       document.getElementsByClassName('bespoke-text-clear-btn')[0].addEventListener('click', function(e){_this.inputClear(_this)});
       _this.elSetEvent(document.querySelectorAll('.bespoke-position-select-wrap > li'), _this.applyBespokePosition, 'click', _this);
@@ -3040,6 +3047,7 @@ import { useEffect } from 'react';
       _this.elSetEvent(document.querySelectorAll('.bespoke-checked-whether-content > input'), _this.wholeAgree, 'change', _this);
       document.getElementsByClassName('bespoke-button-reset')[0].addEventListener('click', function(e){_this.bespokeCancle(_this)});
       document.getElementsByClassName('bespoke-button-apply')[0].addEventListener('click', function(e){_this.applyBespoke(_this)});
+
     }
   }
   // 1. BespokeToggleAppear class 부분
@@ -3108,6 +3116,7 @@ import { useEffect } from 'react';
       $(".bespoke-container-toggle").removeClass("active");
       // console.log("4444");
     }
+
     return false;
   }
   
@@ -3144,6 +3153,7 @@ import { useEffect } from 'react';
 //   bespokeAppearCheck,
 //   JnsBespoke
 // }
+
 
 
 

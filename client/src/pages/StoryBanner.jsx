@@ -38,8 +38,8 @@ const StoryBanner = () => {
           <div className="navTitle">Brand<br />Story</div>
         </a>
 
-        <a className="categoryBtn" data-filter="Celebrity"
-          href="/board/gallery/list.html?adcode=20211008_bn_stb_celeb">
+        <a className="categoryBtn" data-filter="0JSM3CB40502F"
+          href="/bespoke?0JSM3CB40502F" aria-label='0JSM3CB40502F'>
           <div className="thumb">
             <img src="/images/str_brandstory.jpg" alt="" />
           </div>

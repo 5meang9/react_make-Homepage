@@ -1,6 +1,6 @@
 let preview = `
-<div id="small-preview" class="active">
-  <div class="preview-wrap" style="display: block;">
+<div id="small-preview">
+  <div class="preview-wrap">
     <div class="preview-front-img">
       <img src="" alt="미리보기 전면" />
     </div>
@@ -14,7 +14,7 @@ let preview = `
 </div>`
 
 let htmlTxt = `
-<div id="bespoke-small-container active">
+<div id="bespoke-small-container">
 	<div class="bespoke-text-wrap active">
 		<div class="bespoke-text-title">자수 스타일</div>
 		<div class="bespoke-text-input-wrap">
