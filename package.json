@@ -22,15 +22,21 @@
   },
   "homepage": "https://github.com/5meang9/react_make-Homepage#readme",
   "dependencies": {
+    "@types/react-scrollspy": "^3.3.5",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "concurrently": "^8.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "jquery": "^3.7.0",
     "mongodb": "^5.4.0",
+    "react-ui-scrollspy": "^2.3.0",
+    "sass": "^1.63.4",
+    "swiper": "^9.4.1",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/jquery": "^3.5.16",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1"
