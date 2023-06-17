@@ -2999,8 +2999,11 @@ import { useEffect } from 'react';
                   }
                 }else{
                   document.getElementsByClassName('bescon')[0].style.cssText += `background-position : 52% 81%;`
-                  // bespoke.size == 'MF' ? document.getElementsByClassName('bescon')[0].style.backgroundPosition = '52% 50%' : '';
-                  // bespoke.size == 'MT' ? document.getElementsByClassName('bescon')[0].style.backgroundPosition = '52% 86%' : '';
+                  if(bespoke.size == 'MF'){
+                    document.getElementsByClassName('bescon')[0].style.backgroundPosition = '52% 50%'
+                  }else if(bespoke.size == 'MT'){
+                    document.getElementsByClassName('bescon')[0].style.backgroundPosition = '52% 86%'
+                  }
                 }
               }
               break;
@@ -3022,7 +3025,9 @@ import { useEffect } from 'react';
         case "bigPet": case "bigText": //빅펫, 빅텍스트 만드는 부분
   
           document.getElementsByClassName('bespoke-img-result')[0].insertAdjacentHTML('afterbegin', `<div class="bescon-title">최종 구매하실 비스포크 자수입니다.</div><div class="bescon-big" style="background-image: url('${bespoke.imgs[0]}');"></div>`);
-          // (bespoke.size == 'SM' || bespoke.size == 'MT') ? document.getElementsByClassName('bescon-big')[0].style.backgroundPosition = '52% 83%' : '';
+          if(bespoke.size == 'SM' || bespoke.size == 'MT'){
+            document.getElementsByClassName('bescon-big')[0].style.backgroundPosition = '52% 83%'
+          }
           connection += `<img class="bescon-big-img" src='/bespoke_assets/${_this.bespokeResultKind.toLowerCase()}s/${_this.bespokeBigSymbolColor}/${_this.bespokeBigSymbol}.png'>`;
           document.getElementsByClassName('bescon-big')[0].insertAdjacentHTML('afterbegin', connection);
           break;
