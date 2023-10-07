@@ -9,7 +9,9 @@
     "backend": "ts-node --esm server/src/index.ts",
     "frontend": "npm run start --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,14 +22,17 @@
   "bugs": {
     "url": "https://github.com/5meang9/react_make-Homepage/issues"
   },
-  "homepage": "https://github.com/5meang9/react_make-Homepage#readme",
+  "homepage": "https://won0108.github.io/",
   "dependencies": {
     "@types/react-scrollspy": "^3.3.5",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "bundler": "^0.8.0",
     "concurrently": "^8.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "gh-pages": "^6.0.0",
+    "jekyll": "^3.0.0-beta1",
     "jquery": "^3.7.0",
     "mongodb": "^5.4.0",
     "react-ui-scrollspy": "^2.3.0",
